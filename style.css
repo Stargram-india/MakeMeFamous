@@ -649,7 +649,7 @@ margin-bottom: -24px;
             font-size: 18px;
         }
         .connect-div {
-            font-size: 12px;
+            font-size: 9px;
         }
         
         
@@ -734,7 +734,7 @@ font-family: Josefin-Sans;
     }
 @media screen and  (min-width:350px) { /* smartphones, iPhone, portrait 480x320 phones */
     .connect-div {
-        font-size: 12px;
+        font-size: 10px;
     }
     .top-heading {
         /* position: absolute; */

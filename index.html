@@ -190,7 +190,7 @@
                         <a id="apply-now-button3"  href="./form.html" class=" mx-auto apply-now-button p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</a>
                     </div>
                     <div class="row mb-5" style="margin-right:0px; margin-left: 0px;">
-                    <a href="#faq-section" class="mx-auto note-text" style="color: black; margin-top: 0;margin-bottom: 1rem;">NB: Please read all the FAQs before you apply</a>
+                    <a href="#faq-section" onclick="faqClickedPrice()" class="mx-auto note-text" style="color: black; margin-top: 0;margin-bottom: 1rem;">NB: Please read all the FAQs before you apply</a>
                     </div>
                     <div class="row isa-card-bottom p-2 " style="margin-right:0px; margin-top: 2.9rem;
                     margin-left: 0px;position: absolute;
@@ -244,7 +244,7 @@
            
        </div>
        <div class="row">
-        <a href="#faq-section" onclick="faqClicked()" class="mx-auto note-text mt-2 mb-4" style="color: white;">NB: Please read all the FAQs before you apply</a>
+        <a href="#faq-section" onclick="faqClickedProof()" class="mx-auto note-text mt-2 mb-4" style="color: white;">NB: Please read all the FAQs before you apply</a>
        </div>
 
     </div>
@@ -465,9 +465,14 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-    <script>
-        function faqClicked () {
-            console.log("hhhhhhhhhhhhhh")
+    <script> 
+        function faqClickedProof () {
+            fbq('trackCustom', 'Section Viewed', {source: 'Faq Section', on:"Proof Section"})
+            mixpanel.track("MakeMeFamous",  {'source':'Proof Section', 'Action':"Go to Faq Page"})
+        }
+        function faqClickedPrice() {
+            fbq('trackCustom', 'Section Viewed', {source: 'Faq Section', on:"Price Section"})
+            mixpanel.track("MakeMeFamous",  {'source':'Pricing Section', 'Action':"Go to Faq Page"})
         }
         $('#apply-now-button0').on("click",function(e){
             e.preventDefault()

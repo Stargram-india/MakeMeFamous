@@ -23,7 +23,9 @@ html,body{
 /* ul {
     list-style-image: url('/images/list_Icon.png');
   } */
-
+.apply-mob {
+    display: none;
+}
   #cover {
    
     background-size: cover;
@@ -544,6 +546,9 @@ margin-bottom: -24px;
 
     @media screen and (min-width:300px) {
         
+        .apply-mob {
+            display: flex;
+        }
         .top-heading {
             /* position: absolute; */
             color: white;
@@ -606,6 +611,9 @@ margin-bottom: -24px;
             font-family: Josefin-Sans;
             text-align: center;
             font-size: 18px;
+        }
+        .connect-div {
+            font-size: 12px;
         }
         
         
@@ -689,7 +697,9 @@ font-family: Josefin-Sans;
 }
     }
 @media screen and  (min-width:350px) { /* smartphones, iPhone, portrait 480x320 phones */
-   
+    .connect-div {
+        font-size: 12px;
+    }
     .top-heading {
         /* position: absolute; */
         color: white;
@@ -770,7 +780,9 @@ font-family: Josefin-Sans;
 @media screen and (min-width:481px)  { 
     
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-
+    .connect-div {
+        font-size: 12px;
+    }
     .top-heading {
         /* position: absolute; */
         color: white;
@@ -913,6 +925,12 @@ font-family: Josefin-Sans;
         margin-top: 100%;
         font-size: 33px;
     }
+    .apply-mob {
+        display: none;
+    }
+    .connect-div {
+        font-size: 15px;
+    }
     .nav-title {
         font-family: Billabong;
         color: white;
@@ -957,6 +975,9 @@ font-family: Josefin-Sans;
         font-size: 28px;
     }
 
+    .connect-div {
+        font-size: 18px;
+    }
     .text-1 {
         font-family: Josefin-Sans;
         font-size: 39px;
@@ -1007,6 +1028,9 @@ font-family: Josefin-Sans;
     .additional-row {
         margin-bottom: 53px;
     }
+    .apply-mob {
+        display: none;
+    }
 
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
@@ -1016,6 +1040,9 @@ font-family: Josefin-Sans;
 font-family: Josefin-Sans;
 margin-top: 50%;
 font-size: 60px;
+    }
+    .connect-div {
+        font-size: 1rem;
     }
     .top-subtitle {
         text-align: center;
@@ -1108,6 +1135,9 @@ font-size: 60px;
      color: white;
      text-align: center;
                 }
+                .apply-mob {
+                    display: none;
+                }
                 .nav-title {
                     font-family: Billabong;
                     color: white;
@@ -1131,8 +1161,14 @@ font-size: 60px;
         color: white;
         font-size: 30px;
     }
-    andpresent {
+    .apply-mob {
+        display: none;
+    }
+    .andpresent {
         font-size: 28px;
+    }
+    .connect-div {
+        font-size: 1rem;
     }
     
 }

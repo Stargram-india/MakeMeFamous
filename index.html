@@ -59,7 +59,10 @@
     <section class="landing-div  ">
         <nav class="navbar navbar-light myNav" > 
             <span class=" mb-0 h1 nav-title display-5" id="nav-title" style="color: white;">Make Me Famous</span>
+            <div>
             <a href="#faq-section"  class="learn-more-button ">Learn More</a>
+            <a href="" class=" nav-apply-button">Apply Now</a>
+            </div>
         </nav>
         <div class="container">
             <div class="row ">
@@ -525,6 +528,22 @@ $('#apply-now-button3').on("click",function(e){
        else {
         $('.myNav').css({"backdrop-filter":"",
        "background": ""})
+       }
+       if (window.scrollY > 450) {
+           $('.nav-apply-button').css(
+               'display','inline'
+           )
+           $('.learn-more-button').css({
+               'display':'none'       
+                })
+       }
+       else {
+        $('.learn-more-button').css({
+               'display':'inline'       
+                })
+        $('.nav-apply-button').css({
+               'display':'none'
+           })
        }
 
         $('section').each(function () {

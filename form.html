@@ -46,25 +46,21 @@
             <input placeholder="Location " name="Location" type="text" tabindex="5" required>
           </fieldset>
           <fieldset>
-            <textarea placeholder="Address " name="Address" type="text" rows="3" tabindex="6" required></textarea>
+            <textarea placeholder="Address " name="Address" type="text" rows="1"  tabindex="6" required></textarea>
           </fieldset>
           <fieldset>
-            <textarea placeholder="What type of content are you planning to create? " name="Planning_to_Create" type="text" tabindex="7" required></textarea>
+            <input placeholder="How many videos are you planning to do in a month? " name="Videos_Per_Month" type="text" tabindex="8" required/>
           </fieldset>
           <fieldset>
-            <textarea placeholder="How many videos are you planning to do in a month? " name="Videos_Per_Month" type="text" tabindex="8" required></textarea>
+            <textarea placeholder="What type of content are you planning to create? " rows="3" name="Planning_to_Create" type="text" tabindex="7" required></textarea>
           </fieldset>
+      
           
           <fieldset>
             <textarea placeholder="About You ?" name="About_You" tabindex="9" required></textarea>
           </fieldset>
           <fieldset>
-          <div class="form-check">
-            <input class="form-check-input" name= "Terms" type="checkbox" value="" id="flexCheckDefault" style="margin-top: 0.5rem;">
-            <label class="form-check-label" for="flexCheckDefault">
-              I agree that I have read and understood all the FAQ's
-            </label>
-          </div>
+         
         </fieldset>
         <fieldset>
           <label style="margin-bottom: 0;">Choose a plan that you prefer?</label>
@@ -74,6 +70,12 @@
             <option value="Create Now Pay Later">2. Create Now Pay Later</option>
           </select>
           <!-- <input placeholder="About You? " name="About_You" type="" tabindex="8" required> -->
+          <div class="form-check">
+            <input class="form-check-input" name= "Terms" type="checkbox" value="" id="flexCheckDefault" style="margin-top: 0.5rem;">
+            <label class="form-check-label" for="flexCheckDefault">
+              I agree that I have read and understood all the FAQ's
+            </label>
+          </div>
         </fieldset>
           <fieldset>
             <button  type="submit" id="contact-submit" data-submit="...Sending">Apply Now</button>
@@ -164,7 +166,7 @@
 
             },
             messages:{
-                Terms:"please accept terms and conditions to apply"
+                Terms:"I agree that I have read and understood all the FAQ's"
             },
             submitHandler: (form, e) => {
                 console.log("hellllllllllllllllllll")

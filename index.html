@@ -38,6 +38,9 @@
         mixpanel.track('MakeMeFamous', {
             'source': "opened the webpage",
         });
+        mixpanel.track('MakeMeFamous-PageView', {
+            'source':"opened the webpage"
+        })
         </script>
 
     
@@ -281,15 +284,15 @@
                            4. Do I have to pay any amount if I’m opting for the “create now pay later” option?
                         </h4>
                         <p class="read faq-text">
-                            No, you don’t have to pay any amount upfront other than the transportation and operational charges
+                            No, you don’t have to pay any amount upfront other than the transportation and operational charges(TOC)
                         </p>
                     </li>
                     <li>
                         <h4 class="faq-heading">
-                            5. How much is the transportation and operational charges?
+                            5. How much is the transportation and operational charges (TOC) ?
                         </h4>
                         <p class="read faq-text">
-                            Rs. 2000 per hour for the first hour and Rs. 1500 per additional hours
+                            Rs. 3000 per hour for the first hour and Rs. 2500 per additional hours
                         </p>
                     </li>
                   
@@ -343,7 +346,7 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
                             11. How much does it cost me if I choose the “Pay as you go” model? 
                         </h4>
                         <p class="read faq-text">
-                            If you opt for the “Pay as you go” model you have to pay Rs. 6000 per hour for the first hour and Rs. 4000 per hour for additional hours
+                            If you opt for the “Pay as you go” model you have to pay Rs. 6000 per hour(including TOC) for the first hour and Rs. 4000 per hour(including TOC) for additional hours
                         </p>
                     </li>
                     <li>
@@ -414,12 +417,20 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
     <section class="footer-1 p-5">
         <div class="container">
         <div class="row">
-            <div>
+            <div class="col-md-6">
                 <p class="text-white footer-title">Make me famous</p>
                 
             </div>
-            <div>
-
+            
+            <div class="col-md-6">
+                <!-- <p>Contact Us</p> -->
+                <div class="row">
+                <div class="text-white ml-auto mr-5">
+                    <p  class="text-white "><img src="./images/call.png" width="28" height="28"> <span class="ml-2">+91 9746 093 907</span></p>
+                    <p class="text-white"><img src="./images/mail.png" width="28" height="28"> <span class="ml-2">hello@stargarm.in</span></p>
+                </div>
+                
+            </div>
             </div>
         </div>
     </div>
@@ -432,7 +443,7 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
             <div class="modal-content">
                 <div class="modal-header">
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button> -->
-                    <button type="button" onclick="closeCol()" aria-label=""><span>×</span></button>
+                    <button type="button" class="btn" onclick="closeCol()" aria-label=""><span>×</span></button>
                  </div>
                 
                 <div class="modal-body">

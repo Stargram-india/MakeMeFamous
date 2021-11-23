@@ -73,15 +73,15 @@
            <h3 class="mx-auto text-1">Have you been dreaming of starting a YouTube channel for a long time but are unable to do it because... </h3>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6 col-12 "><p class="info-text">You don’t want to put out poor quality, unprofessional videos that are shot on a mobile cams and edited on mobile apps.</p></div>
+            <div class="col-md-6 col-12 my-auto "><p class="info-text">You don’t want to put out poor quality, unprofessional videos that are shot on a mobile cams and edited on mobile apps.</p></div>
             <div class="col-md-6 col-12"><img class="info-img" src="./images/monkey-selfie-2.jpg"></div>
         </div>
         <div class="row mt-5 cloud">
             <div class="col-md-6 img-2"><img class="info-img"  src="./images/hp-laptop-table-microsoft-teams-screen-183776924.png"></div>
-            <div class="col-md-6 sent-2"><p class="info-text">Or you didn’t have the time to spend hours on learning all the technical stuff like lighting, recording, editing etc.</p></div>
+            <div class="col-md-6 sent-2 my-auto"><p class="info-text">Or you didn’t have the time to spend hours on learning all the technical stuff like lighting, recording, editing etc.</p></div>
         </div>
-        <div class="row mt-5">
-            <div class="col-md-6"><p class="info-text">Or you don’t want to have the pain & nuances of hiring a full time video production team.</p></div>
+        <div class="row mt-5 ">
+            <div class="col-md-6 my-auto"><p class="info-text">Or you don’t want to have the pain & nuances of hiring a full time video production team.</p></div>
             <div class="col-md-6"><img class="info-img"  style="border: 6px solid white;
                 border-radius: 20px;" src="./images/justin-lim-tloFnD-7EpI-unsplash.png"></div>
         </div>
@@ -187,10 +187,10 @@
                         
                     </ul>
                     <div class="row mb-2">
-                        <a id="apply-now-button3" onclick="apply()" href="./form.html" class=" mx-auto apply-now-button p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</a>
+                        <a id="apply-now-button3"  href="./form.html" class=" mx-auto apply-now-button p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</a>
                     </div>
                     <div class="row mb-5" style="margin-right:0px; margin-left: 0px;">
-                    <p class="mx-auto note-text">NB: Please read all the FAQs before you apply</p>
+                    <a href="#faq-section" class="mx-auto note-text" style="color: black; margin-top: 0;margin-bottom: 1rem;">NB: Please read all the FAQs before you apply</a>
                     </div>
                     <div class="row isa-card-bottom p-2 " style="margin-right:0px; margin-top: 2.9rem;
                     margin-left: 0px;position: absolute;
@@ -240,11 +240,11 @@
        </div>
        <div class="row">
            
-        <a id="apply-now-button0"href="./form.html" class=" mx-auto apply-now-button1 p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</a>
+        <button id="apply-now-button0" class=" mx-auto apply-now-button1 p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</button>
            
        </div>
        <div class="row">
-        <p class="mx-auto note-text mt-2 mb-4" style="color: white;">NB: Please read all the FAQs before you apply</p>
+        <a href="#faq-section" onclick="faqClicked()" class="mx-auto note-text mt-2 mb-4" style="color: white;">NB: Please read all the FAQs before you apply</a>
        </div>
 
     </div>
@@ -416,6 +416,7 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
         <div class="row">
             <div>
                 <p class="text-white footer-title">Make me famous</p>
+                
             </div>
             <div>
 
@@ -465,11 +466,27 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script>
-        $('#apply-now-button0').click(function() {
-            print("its working")
-    fbq('track', 'Lead', {'content_category':'applying button clicked',
-                          'content_name':"apply now button"});
-  })
+        function faqClicked () {
+            console.log("hhhhhhhhhhhhhh")
+        }
+        $('#apply-now-button0').on("click",function(e){
+            e.preventDefault()
+        mixpanel.track('MakeMeFamous', {'source':'Proof Section', 'Action':"Apply Button Clicked"})
+    fbq('track', 'Lead', {'content_category':'Proof Section', 'content_name':"apply now button"});
+    window.location.href = './form.html'
+})
+$('#apply-now-button2').on("click",function(e){
+            e.preventDefault()
+        mixpanel.track('MakeMeFamous', {'source':'Faq Section', 'Action':"Apply Button Clicked"})
+    fbq('track', 'Lead', {'content_category':'Faq Section', 'content_name':"apply now button"});
+    window.location.href = './form.html'
+})
+$('#apply-now-button3').on("click",function(e){
+            e.preventDefault()
+        mixpanel.track('MakeMeFamous', {'source':'Pricing Section', 'Action':"Apply Button Clicked"})
+    fbq('track', 'Lead', {'content_category':'Pricing Section', 'content_name':"apply now button"});
+    window.location.href = './form.html'
+})
     </script>
     <script>
         var info = true
@@ -483,33 +500,37 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
                 console.log("this section is"+$(this).attr('id'));
                 if(info && ($(this).attr('id') === "info-section"))  {
                 info = false
-                fbq('track', 'Info Section', "Viewed");
+                fbq('trackCustom', 'Section Viewed', {source: 'Problem Section'})
                 mixpanel.track('MakeMeFamous', {
-            'source': "Info Section",
+            'source': "Problem Section",
         }); 
     }
         else if (relax &&  $(this).attr('id') === "relaxDiv") {
             relax = false
+            fbq('trackCustom', 'Section Viewed', {source: 'Solution Section'})
                  mixpanel.track('MakeMeFamous', {
-            'source': "Relax Section",
+            'source': "Solution Section",
         });
    
         }
         else if (payLater &&  $(this).attr('id') === "payLater") {
             payLater = false
+            fbq('trackCustom', 'Section Viewed', {source: 'Pricing-Plan Section'})
                  mixpanel.track('MakeMeFamous', {
-            'source': "Pay Later Section",
+            'source': "Pricing-Plan Section",
         });
    
         }
         else if (diffSection &&  $(this).attr('id') === "diffSection") {
             diffSection = false
+            fbq('trackCustom', 'Section Viewed', {source: 'Proof Section'})
                  mixpanel.track('MakeMeFamous', {
-            'source': "Before and After Section",
+            'source': "Proof Section",
         });
         }
         else if (faqSection &&  $(this).attr('id') === "faq-section") {
             faqSection= false
+            fbq('trackCustom', 'Section Viewed', {source: 'Faq Section'})
                  mixpanel.track('MakeMeFamous', {
             'source': "Faq Section",
         });
@@ -530,15 +551,15 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
         });
     });;
 
-    mixpanel.track_links("#apply-now-button0", "MakeMeFamous", {
-        "source": "Clicked Apply Button"
-    })
-    mixpanel.track_links("#apply-now-button2", "MakeMeFamous", {
-        "source": "Clicked Apply Button"
-    })
-    mixpanel.track_links("#apply-now-button3", "MakeMeFamous", {
-        "source": "Clicked Apply Button"
-    })
+    // mixpanel.track_links("#apply-now-button0", "MakeMeFamous", {
+    //     "source": "Clicked Apply Button"
+    // })
+    // mixpanel.track_links("#apply-now-button2", "MakeMeFamous", {
+    //     "source": "Clicked Apply Button"
+    // })
+    // mixpanel.track_links("#apply-now-button3", "MakeMeFamous", {
+    //     "source": "Clicked Apply Button"
+    // })
     </script>
     <script>
         function myFunction () {

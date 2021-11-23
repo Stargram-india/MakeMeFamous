@@ -26,6 +26,19 @@ html,body{
 .apply-mob {
     display: none;
 }
+
+.learn-more-button {
+    margin-right: 0;
+    color: aliceblue;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
   #cover {
    
     background-size: cover;
@@ -545,6 +558,29 @@ margin-bottom: -24px;
       }
 
     @media screen and (min-width:300px) {
+        .learn-more-button {
+            margin-right: 0;
+            color: aliceblue;
+            font-size: 10px;
+            border: 1
+        px
+         solid;
+            border-radius: 30
+        px
+        ;
+            padding-left: 14
+        px
+        ;
+            padding-right: 14
+        px
+        ;
+            padding-top: 5
+        px
+        ;
+            padding-bottom: 5
+        px
+        ;
+        }
         
         .apply-mob {
             display: flex;
@@ -1135,6 +1171,18 @@ font-size: 60px;
      color: white;
      text-align: center;
                 }
+                .learn-more-button {
+                    margin-right: 0;
+                    color: aliceblue;
+                    font-size: 14px;
+                    border: 1px solid;
+                    border-radius: 30px;
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                
+                }
                 .apply-mob {
                     display: none;
                 }
@@ -1169,6 +1217,18 @@ font-size: 60px;
     }
     .connect-div {
         font-size: 1rem;
+    }
+    .learn-more-button {
+        margin-right: 0;
+        color: aliceblue;
+        font-size: 14px;
+        border: 1px solid;
+        border-radius: 30px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    
     }
     
 }

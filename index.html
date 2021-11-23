@@ -58,8 +58,8 @@
       
     <section class="landing-div  ">
         <nav class="navbar navbar-light myNav" > 
-            <span class=" mb-0 h1 nav-title display-5" id="nav-title" style="color: white;">Make Me Famous</span>
-            <a href="#faq-section" style="margin-right: 0;" class="learn-more-button">Learn More</a>
+            <span class=" mb-0 h1 nav-title display-5 ml-4" id="nav-title" style="color: white;">Make Me Famous</span>
+            <a href="#faq-section" style="margin-right: 0;" class="learn-more-button mr-4">Learn More</a>
         </nav>
         <div class="container">
             <div class="row ">
@@ -82,7 +82,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-6 col-12 my-auto "><p class="info-text">You don’t want to put out poor quality, unprofessional videos that are shot on a mobile cams and edited on mobile apps.</p></div>
-            <div class="col-md-6 col-12"><img class="info-img" src="./images/monkey-selfie-2.jpg"></div>
+            <div class="col-md-6 col-12"><img class="info-img" src="./images/monkey-selfie-2.png"></div>
         </div>
         <div class="row mt-5 cloud">
             <div class="col-md-6 img-2"><img class="info-img"  src="./images/hp-laptop-table-microsoft-teams-screen-183776924.png"></div>
@@ -516,6 +516,17 @@ $('#apply-now-button3').on("click",function(e){
         var diffSection = true
         var faqSection =  true
    $(document).scroll(function () {
+       $('.myNav').css({"backdrop-filter":"blur(10px)",
+       "background": "rgb(0,0,0, 0.2)"})
+       if(window.scrollY > 50 ){
+        $('.myNav').css({"backdrop-filter":"blur(10px)",
+       "background": "rgb(0,0,0, 0.2)"})
+       }
+       else {
+        $('.myNav').css({"backdrop-filter":"",
+       "background": ""})
+       }
+
         $('section').each(function () {
             if($(this).position().top <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
                 console.log("this section is"+$(this).attr('id'));

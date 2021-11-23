@@ -95,9 +95,10 @@ form:before {
 
 }
 .myNav {
+    /* backdrop-filter: blur(10px); */
     position: fixed;
     top: 0;
-    background: rgb(0,0,0, 0.2);
+    /* background: rgb(0,0,0, 0.2); */
     /* background: black;
     opacity: 5%; */
     width: 100%;

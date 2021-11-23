@@ -66,6 +66,13 @@ fieldset {
   padding: 0;
   width: 100%;
 }
+#contact select {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
 
 #contact input[type="text"],
 #contact input[type="email"],

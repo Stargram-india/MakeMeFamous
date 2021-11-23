@@ -29,7 +29,7 @@
     <div class="container">  
         <form id="contact" action="" method="post">
           <h3>Submit your Application</h3>
-          <h4>Contact us for custom quote</h4>
+          <h4>Contact us</h4>
           <fieldset>
             <input placeholder="Your name" name="Name" type="text" tabindex="1" required autofocus>
           </fieldset>
@@ -40,10 +40,30 @@
             <input placeholder="Your Phone Number" name="Mobile" type="tel" tabindex="3" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Location " name="Location" type="text" tabindex="4" required>
+            <input placeholder="Profession " name="Profession" type="text" tabindex="4" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Pincode " name="Pincode" type="text" tabindex="4" required>
+            <input placeholder="Your Location " name="Location" type="text" tabindex="5" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Address " name="Address" type="text" tabindex="6" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="What type of content are you planning to create? " name="Planning_to_Create" type="text" tabindex="7" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="How many videos are you planning to do in a month? " name="Videos_Per_Month" type="text" tabindex="8" required>
+          </fieldset>
+          <fieldset>
+            <label style="margin-bottom: 0;">Choose a plan that you prefer?</label>
+            <select name="Plan" id="Plan">
+              <option value="Pay as You Go">1. Pay as You Go</option>
+              <option value="Create Now Pay Later">2. Create Now Pay Later</option>
+            </select>
+            <!-- <input placeholder="About You? " name="About_You" type="" tabindex="8" required> -->
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="About You ?" name="About_You" tabindex="9" required></textarea>
           </fieldset>
           <fieldset>
           <div class="form-check">
@@ -109,6 +129,9 @@
                     required: true,
                     email: true,
                 },
+                Profession: {
+                  required:true
+                },
                 Mobile: {
                     required: true,
                     
@@ -116,15 +139,26 @@
                 },
                 Location:{
                     required: true,
-                }
-                ,
+                },
+                Address:{
+                  required:true,
+                },
                 Terms:{
                     required:true,
                     maxlength:2
+                },
+                Planning_to_Create:{
+                  required:true
+                },
+                Videos_Per_Month:{
+                  required:true
+                },
+                Plan:{
+                  required:true
+                },
+                About_You:{
+                  required:true
                 }
-
-
-
 
             },
             messages:{

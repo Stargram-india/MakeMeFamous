@@ -374,7 +374,7 @@ font-family: Avenir-Normal;
 
 .difference-section {
     background: black;
-    height: 100vh;
+   
 
 }
 .d-title {
@@ -693,7 +693,7 @@ margin-bottom: -24px;
             /* position: absolute; */
             color: white;
             font-family: Avenir-Heading;
-            margin-top: 60%;
+            margin-top: 45%;
             font-size: 28px;
         }
         .top-subtitle {
@@ -733,7 +733,7 @@ margin-bottom: -24px;
         .pl-title {
             font-family: Avenir-Heading;
             font-size: 26px;
-            line-height: 86px;
+            line-height: 40px;
             text-align: center;
         }
         .pl-subtitle {
@@ -885,7 +885,7 @@ font-family: Avenir-Normal;
         /* position: absolute; */
         color: white;
         font-family:Avenir-Heading;
-        margin-top: 82%;
+        margin-top: 50%;
         font-size: 40px;
         text-align: center;
     }
@@ -1103,6 +1103,7 @@ font-family: Avenir-Normal;
         text-align: center;
         font-family: Avenir-Normal;
         font-size: 24px;
+        line-height: 35px;
         color:white
     }
 

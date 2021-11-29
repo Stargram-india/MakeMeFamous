@@ -258,7 +258,7 @@
        </div>
        <div class="row">
            
-        <button id="apply-now-button0" class=" mx-auto apply-now-button1 p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</button>
+        <button id="apply-now-button4" class=" mx-auto apply-now-button1 p-3 pl-5  pr-5 btn btn-danger"  style="background: #FF0462;">Apply Now</button>
            
        </div>
        <div class="row">
@@ -501,6 +501,12 @@ We do this so that everyone gets an opportunity to tryout and see whether conten
             mixpanel.track("MakeMeFamous",  {'source':'Pricing Section', 'Action':"Go to Faq Page"})
         }
         $('#apply-now-button0').on("click",function(e){
+            e.preventDefault()
+        mixpanel.track('MakeMeFamous', {'source':'Proof Section', 'Action':"Apply Button Clicked"})
+    fbq('track', 'Lead', {'content_category':'Proof Section', 'content_name':"apply now button"});
+    window.location.href = './form.html'
+})
+$('#apply-now-button4').on("click",function(e){
             e.preventDefault()
         mixpanel.track('MakeMeFamous', {'source':'Proof Section', 'Action':"Apply Button Clicked"})
     fbq('track', 'Lead', {'content_category':'Proof Section', 'content_name':"apply now button"});

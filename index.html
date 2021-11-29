@@ -13,6 +13,7 @@
     <link rel="preload" href="./images/test.mp4">
     <link rel="icon" href="./images/icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="128x128" href="./images/icon.png">
+    <link rel="manifest" href="./manifest.json">
     <!-- <script type="text/javascript" src="/skrollr.js"></script>
 	<script type="text/javascript"> -->
 	<!-- var s = skrollr.init(); -->
@@ -628,6 +629,18 @@ $('#apply-now-button3').on("click",function(e){
     //     "source": "Clicked Apply Button"
     // })
     </script>
+    <script src="./service-worker.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+           console.log("Will the service worker register?");
+           navigator.serviceWorker.register('service-worker.js')
+             .then(function(reg){
+               console.log("Yes, it did.");
+            }).catch(function(err) {
+               console.log("No it didn't. This happened:", err)
+           });
+        }
+       </script>
     <script>
         function myFunction () {
             

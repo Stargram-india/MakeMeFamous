@@ -31,6 +31,9 @@ html,body{
 /* ul {
     list-style-image: url('/images/list_Icon.png');
   } */
+::-webkit-scrollbar {
+    display: none;
+}
 .apply-mob {
     display: none;
 }
